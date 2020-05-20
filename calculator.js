@@ -15,7 +15,13 @@ function buttonClick(value) {
 }
 
 function hanldeSymbol(symbol) {}
-function handleNumber(numberString) {}
+function handleNumber(numberString) {
+  if (buffer === "0") {
+    buffer = numberString;
+  } else {
+    buffer += numberString;
+  }
+}
 
 function init() {
   document
