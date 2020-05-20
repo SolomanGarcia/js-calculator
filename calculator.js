@@ -53,6 +53,18 @@ function handleMath(symbol) {
   buffer = "0";
 }
 
+function flushOperation(intBuffer) {
+  if (previousOperator === "&plus") {
+    runningTotal += intBuffer;
+  } else if (previousOperator === "&minus") {
+    runningTotal -= intBuffer;
+  } else if (previousOperator === "&times") {
+    runningTotal *= intBuffer;
+  } else {
+    runningTotal /= intBuffer;
+  }
+}
+
 function handleNumber(numberString) {
   if (buffer === "0") {
     buffer = numberString;
