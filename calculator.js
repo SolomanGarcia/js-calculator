@@ -20,7 +20,7 @@ function handleSymbol(symbol) {
   //   buffer = "0";
   //   runningTotal = 0;
   // }
-  switch (value) {
+  switch (symbol) {
     case "C":
       buffer = "0";
       runningTotal = 0;
