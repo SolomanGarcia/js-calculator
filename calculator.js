@@ -7,12 +7,15 @@ const screen = document.querySelector(".screen");
 function buttonClick(value) {
   if (isNaN(value)) {
     // This is not a number
+    hanldeSymbol(value);
   } else {
+    // This is a number
+    handleNumber(value);
   }
 }
 
-function hanldeSymbol() {}
-function handleNumber() {}
+function hanldeSymbol(symbol) {}
+function handleNumber(numberString) {}
 
 function init() {
   document
