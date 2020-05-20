@@ -12,16 +12,22 @@ function buttonClick(value) {
     // This is a number
     handleNumber(value);
   }
+  screen.innerText = buffer;
 }
 
-function hanldeSymbol(symbol) {}
+function hanldeSymbol(symbol) {
+  if (symbol === "C") {
+    buffer = "0";
+    runningTotal = 0;
+  }
+}
+
 function handleNumber(numberString) {
   if (buffer === "0") {
     buffer = numberString;
   } else {
     buffer += numberString;
   }
-  screen.innerText = buffer;
 }
 
 function init() {
