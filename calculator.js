@@ -7,7 +7,7 @@ const screen = document.querySelector(".screen");
 function buttonClick(value) {
   if (isNaN(value)) {
     // This is not a number
-    hanldeSymbol(value);
+    handleSymbol(value);
   } else {
     // This is a number
     handleNumber(value);
@@ -15,10 +15,22 @@ function buttonClick(value) {
   screen.innerText = buffer;
 }
 
-function hanldeSymbol(symbol) {
-  if (symbol === "C") {
-    buffer = "0";
-    runningTotal = 0;
+function handleSymbol(symbol) {
+  // if (symbol === "C") {
+  //   buffer = "0";
+  //   runningTotal = 0;
+  // }
+  switch (value) {
+    case "C":
+      buffer = "0";
+      runningTotal = 0;
+      break;
+    case "&plus":
+    case "&minus":
+    case "&times":
+    case "&divide":
+      handleMath(symbol);
+      break;
   }
 }
 
